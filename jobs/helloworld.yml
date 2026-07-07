@@ -1,0 +1,13 @@
+- job:
+    name: hello-world
+
+    project-type: freestyle
+
+    description: |
+      My first Jenkins Job Builder job.
+
+    builders:
+      - shell: |
+          echo "Hello from Jenkins Job Builder!"
+          echo "Current user: $(whoami)"
+          echo "Workspace: $(pwd)"
