@@ -1,1 +1,2 @@
-jenkins_jobs.ini.template filter=git-crypt diff=git-crypt
+dev-test-jjb.sh filter=git-crypt diff=git-crypt
+dev-update-jjb.sh filter=git-crypt diff=git-crypt
