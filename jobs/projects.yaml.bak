@@ -1,0 +1,8 @@
+- project:
+    name: payment-project
+    application-name: payment
+    environment: dev
+    git-branch: main
+
+    jobs:
+      - "{application-name}-build"

@@ -1,10 +1,17 @@
 [job_builder]
+
 ignore_cache=True
+
 keep_descriptions=False
+
 recursive=True
 
+retain_anchors=True
+
+allow_duplicates=False
+
 [jenkins]
+
 url=https://my-jenkins-lab.duckdns.org/
-user=
-password=
-query_plugins_info=False
+
+aws secretsmanager get-secret-value --secret-id jenkins-apitoken

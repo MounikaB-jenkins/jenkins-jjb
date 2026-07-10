@@ -1,0 +1,30 @@
+- job-template:
+    name: "{application-name}-build"
+
+    project-type: freestyle
+
+    description: |
+      Build job for {application-name}
+      Managed by Jenkins Job Builder
+
+    concurrent: false
+
+    builders:
+      - shell: |
+          echo "=================================="
+          echo "Banking Application Build"
+          echo "=================================="
+          echo "Application : {application-name}"
+          echo "Environment : {environment}"
+          echo "Git Branch  : {git-branch}"
+          echo ""
+          echo "Starting Build..."
+          sleep 2
+
+          echo "Running Unit Tests..."
+          sleep 2
+
+          echo "Packaging Application..."
+          sleep 2
+
+          echo "Build Successful."

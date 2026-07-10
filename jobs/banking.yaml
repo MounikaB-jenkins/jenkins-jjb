@@ -1,0 +1,31 @@
+- job-template:
+    name: "{application-name}-build"
+
+    project-type: freestyle
+
+    description: |
+      Build job for {application-name}
+      Managed by Jenkins Job Builder
+
+    builders:
+      - shell: |
+          echo "=================================="
+          echo "Banking Application Build"
+          echo "=================================="
+          echo "Application : {application-name}"
+          echo "Environment : {environment}"
+          echo "Git Branch  : {git-branch}"
+
+- project:
+    name: banking
+
+    application-name:
+      - payment
+      - customer
+      - loan
+
+    environment: dev
+    git-branch: main
+
+    jobs:
+      - "{application-name}-build"
