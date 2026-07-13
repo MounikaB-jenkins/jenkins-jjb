@@ -1,2 +1,1 @@
-dev-test-jjb.sh filter=git-crypt diff=git-crypt
-dev-update-jjb.sh filter=git-crypt diff=git-crypt
+config/api_token.env filter=git-crypt diff=git-crypt
